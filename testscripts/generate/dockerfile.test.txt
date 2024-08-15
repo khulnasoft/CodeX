@@ -1,0 +1,3 @@
+exec codex init
+exec codex generate dockerfile
+exists Dockerfile

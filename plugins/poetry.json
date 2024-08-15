@@ -1,0 +1,19 @@
+{
+    "name": "poetry",
+    "version": "0.0.4",
+    "description": "This plugin automatically configures poetry to use the version of python installed in your Codex shell, instead of the Python version that it is bundled with. The pyproject.toml location can be configured by setting CODEX_PYPROJECT_DIR (defaults to the codex.json's directory).",
+    "env": {
+        "CODEX_DEFAULT_PYPROJECT_DIR": "{{ .CodexProjectDir }}",
+        "POETRY_VIRTUALENVS_IN_PROJECT": "true",
+        "POETRY_VIRTUALENVS_CREATE": "true",
+        "POETRY_VIRTUALENVS_PATH": "{{.Virtenv}}/.virtualenvs"
+    },
+    "create_files": {
+        "{{ .Virtenv }}/bin/initHook.sh": "poetry/initHook.sh"
+    },
+    "shell": {
+        "init_hook": [
+            "{{ .Virtenv }}/bin/initHook.sh"
+        ]
+    }
+}

@@ -1,0 +1,50 @@
+---
+title: LEPP (Linux, Nginx, PHP, Postgres)
+---
+
+
+An example Codex shell for NGINX, Postgres, and PHP. This example uses Codex Plugins for all 3 packages to simplify configuration
+
+[Example Repo](https://github.com/khulnasoft/codex/tree/main/examples/stacks/lepp-stack)
+
+[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/lepp-stack)
+
+## How to Run
+
+### Initializing
+
+In this directory, run:
+
+`codex shell`
+
+This will run `initdb` automatically on initialization. To start the Servers + Postgres service, run:
+
+`codex services up`
+
+### Creating the DB
+
+You can run the creation script using `codex run create_db`. This will create a Postgres DB based on `setup_postgres_db.sql`.
+
+### Testing the Example
+
+You can query Nginx on port 80, which will route to the PHP example.
+
+## How to Recreate this Example
+
+1. Create a new project with `codex init`
+1. Add the packages using the command below. Installing the packages with `codex add` will ensure that the plugins are activated:
+
+```bash
+codex add postgresql@14 php@8.1 php81Extensions.pgsql@latest nginx@1.24
+```
+
+1. Update `codex.d/nginx/httpd.conf` to point to the directory with your PHP files. You'll need to update the `root` directive to point to your project folder
+2. Follow the instructions above in the How to Run section to initialize your project.
+
+Note that the `.sock` filepath can only be maximum 100 characters long. You can point to a different path by setting the `PGHOST` env variable in your `codex.json` as follows:
+
+```json
+"env": {
+    "PGHOST": "/<some-shorter-path>"
+}
+```

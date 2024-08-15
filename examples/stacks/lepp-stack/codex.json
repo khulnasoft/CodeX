@@ -1,0 +1,37 @@
+{
+  "packages": [
+    "curl@latest",
+    "postgresql@latest",
+    "php@latest",
+    "php83Extensions.pgsql@latest",
+    "nginx@latest"
+  ],
+  "env": {
+    "NGINX_WEB_PORT": "8089",
+    "NGINX_WEB_ROOT": "../../../my_app",
+    "PGPORT": "5433",
+    "PGHOST": "/tmp/codex/lepp"
+  },
+  "shell": {
+    "scripts": {
+      "create_db": [
+        "dropdb --if-exists codex_lepp",
+        "createdb codex_lepp",
+        "psql codex_lepp < setup_postgres_db.sql"
+      ],
+      "init_db": "initdb",
+      "run_test": [
+        "mkdir -p /tmp/codex/lepp",
+        "rm -rf .codex/virtenv/postgresql/data",
+        "initdb",
+        "codex services up -b",
+        "echo 'sleep 2 second for the postgres server to initialize.' && sleep 2",
+        "dropdb --if-exists codex_lepp",
+        "createdb codex_lepp",
+        "psql codex_lepp < setup_postgres_db.sql",
+        "curl localhost:$NGINX_WEB_PORT",
+        "codex services stop"
+      ]
+    }
+  }
+}

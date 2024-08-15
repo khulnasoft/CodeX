@@ -1,0 +1,169 @@
+{
+  "name": "codex",
+  "displayName": "codex by Khulnasoft",
+  "description": "codex integration for VSCode",
+  "version": "0.1.5",
+  "icon": "assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khulnasoft/codex.git",
+    "directory": "vscode-extension"
+  },
+  "author": "Khulnasoft",
+  "publisher": "khulnasoft",
+  "engines": {
+    "vscode": "^1.72.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "extensionDependencies": [
+    "ms-vscode-remote.remote-ssh"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "codex.setupDevContainer",
+        "title": "Codex: Generate Dev Containers config files"
+      },
+      {
+        "command": "codex.reopen",
+        "title": "Codex: Reopen in Codex shell environment"
+      },
+      {
+        "command": "codex.install",
+        "title": "Codex: Install - Install packages in your codex project"
+      },
+      {
+        "command": "codex.update",
+        "title": "Codex: Update - Update packages in your codex project"
+      },
+      {
+        "command": "codex.search",
+        "title": "Codex: Search - Search for packages for your codex project"
+      },
+      {
+        "command": "codex.generateDockerfile",
+        "title": "Codex: Generate a Dockerfile from codex.json"
+      },
+      {
+        "command": "codex.add",
+        "title": "Codex: Add - add packages to your codex project"
+      },
+      {
+        "command": "codex.remove",
+        "title": "Codex: Remove - remove packages from your codex project"
+      },
+      {
+        "command": "codex.run",
+        "title": "Codex: Run - execute scripts specified in codex.json"
+      },
+      {
+        "command": "codex.shell",
+        "title": "Codex: Shell - Go to codex shell in the terminal"
+      },
+      {
+        "command": "codex.init",
+        "title": "Codex: Init - Initiate a codex project"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "codex.setupDevContainer",
+          "when": "codex.configFileExists == true"
+        },
+        {
+          "command": "codex.reopen",
+          "when": "codex.configFileExists == true"
+        },
+        {
+          "command": "codex.install",
+          "when": "codex.configFileExists == true"
+        },
+        {
+          "command": "codex.update",
+          "when": "codex.configFileExists == true"
+        },
+        {
+          "command": "codex.search",
+          "when": "codex.configFileExists == true"
+        },
+        {
+          "command": "codex.add",
+          "when": "codex.configFileExists == true"
+        },
+        {
+          "command": "codex.remove",
+          "when": "codex.configFileExists == true"
+        },
+        {
+          "command": "codex.run",
+          "when": "codex.configFileExists == true"
+        },
+        {
+          "command": "codex.shell",
+          "when": "codex.configFileExists == true"
+        },
+        {
+          "command": "codex.init",
+          "when": "codex.configFileExists == false"
+        }
+      ]
+    },
+    "jsonValidation": [
+      {
+        "fileMatch": "codex.json",
+        "url": "https://raw.githubusercontent.com/khulnasoft/codex/main/.schema/codex.schema.json"
+      }
+    ],
+    "configuration": {
+      "title": "codex",
+      "properties": {
+        "codex.autoShellOnTerminal": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically run codex shell when terminal is opened."
+        },
+        "codex.enableDebugMode": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enables debug mode for this extension which creates an extension.log in .codex/ directory. Currently only works for 'Codex: Reopen in Codex shell environment' command."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "16.x",
+    "@types/node-fetch": "^2",
+    "@types/vscode": "^1.72.0",
+    "@types/which": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "@vscode/test-electron": "^2.1.5",
+    "eslint": "^8.24.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.0.0",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@types/node": "16.x",
+    "form-data": "^4.0.0",
+    "node-fetch": "^2",
+    "which": "^3.0.0"
+  }
+}

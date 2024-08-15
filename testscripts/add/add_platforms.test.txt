@@ -1,0 +1,116 @@
+# Testscript for exercising adding packages
+
+#### Part 1: Adding with a single platform or exclude-platform
+
+exec codex install
+! exec rg --version
+! exec vim --version
+
+# First, add a --platform, and verify that the []string packages
+# becomes a map[string]any packages
+exec codex add ripgrep --platform x86_64-darwin
+json.superset codex.json expected_codex1.json
+
+# Second, add another platform: verify that it adds to the platforms array
+exec codex add ripgrep --platform x86_64-linux
+# Third, add an excluded-platform too
+exec codex add vim --exclude-platform x86_64-linux
+
+json.superset codex.json expected_codex2.json
+
+#### Part 2: Adding with multiple platforms or exclude-platforms
+
+exec codex add hello --platform x86_64-darwin,x86_64-linux --platform aarch64-darwin
+json.superset codex.json expected_codex3.json
+
+exec codex add cowsay --exclude-platform x86_64-darwin,x86_64-linux --exclude-platform aarch64-darwin
+json.superset codex.json expected_codex4.json
+
+### Part 3: Ensure we error to prevent inconsistent state
+
+! exec codex add cowsay --platform x86_64-darwin
+stderr 'Error: cannot add any platform for package cowsay@latest because it already has `excluded_platforms` defined'
+
+! exec codex add hello --exclude-platform x86_64-darwin
+stderr 'Error: cannot exclude any platform for package hello@latest because it already has `platforms` defined'
+
+-- codex.json --
+{
+  "packages": [
+    "hello",
+    "cowsay@latest"
+  ]
+}
+
+-- expected_codex1.json --
+{
+  "packages": {
+    "hello": "",
+    "cowsay": "latest",
+    "ripgrep": {
+      "version": "latest",
+      "platforms": ["x86_64-darwin"]
+    }
+  }
+}
+
+-- expected_codex2.json --
+{
+  "packages": {
+    "hello": "",
+    "cowsay": "latest",
+    "ripgrep": {
+      "version": "latest",
+      "platforms": ["x86_64-darwin", "x86_64-linux"]
+    },
+    "vim": {
+      "version": "latest",
+      "excluded_platforms": ["x86_64-linux"]
+    }
+  }
+}
+
+-- expected_codex3.json --
+
+{
+  "packages": {
+    "hello": "",
+    "cowsay": "latest",
+    "ripgrep": {
+      "version": "latest",
+      "platforms": ["x86_64-darwin", "x86_64-linux"]
+    },
+    "vim": {
+      "version": "latest",
+      "excluded_platforms": ["x86_64-linux"]
+    },
+    "hello": {
+        "version": "latest",
+        "platforms": ["x86_64-darwin", "x86_64-linux", "aarch64-darwin"]
+    }
+  }
+}
+
+-- expected_codex4.json --
+
+{
+  "packages": {
+    "hello": "",
+    "cowsay": {
+      "version": "latest",
+      "excluded_platforms": ["x86_64-darwin", "x86_64-linux", "aarch64-darwin"]
+    },
+    "ripgrep": {
+      "version": "latest",
+      "platforms": ["x86_64-darwin", "x86_64-linux"]
+    },
+    "vim": {
+      "version": "latest",
+      "excluded_platforms": ["x86_64-linux"]
+    },
+    "hello": {
+        "version": "latest",
+        "platforms": ["x86_64-darwin", "x86_64-linux", "aarch64-darwin"]
+    }
+  }
+}

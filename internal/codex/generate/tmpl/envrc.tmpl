@@ -1,0 +1,7 @@
+# Automatically sets up your codex environment whenever you cd into this
+# directory via our direnv integration:
+
+eval "$(codex generate direnv --print-envrc{{ if .Flags}} {{ .Flags }}{{ end }})"
+
+# check out https://www.khulnasoft.com/codex/docs/ide_configuration/direnv/
+# for more details

@@ -1,0 +1,13 @@
+{
+    "name": "postgresql",
+    "version": "0.0.2",
+    "description": "To initialize the database run `initdb`.",
+    "env": {
+        "PGDATA": "{{ .Virtenv }}/data",
+        "PGHOST": "{{ .Virtenv }}"
+    },
+    "create_files": {
+        "{{ .Virtenv }}/data": "",
+        "{{ .Virtenv }}/process-compose.yaml": "postgresql/process-compose.yaml"
+    }
+}

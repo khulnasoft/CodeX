@@ -1,0 +1,29 @@
+exec codex init
+
+exec codex add hello vim cowsay php
+json.superset codex.json all.json
+
+exec codex rm vim hello php
+json.superset codex.json cowsay.json
+
+exec codex add vim hello vim hello vim hello vim hello cowsay php php
+json.superset codex.json all.json
+
+exec codex rm vim hello cowsay cowsay php
+json.superset codex.json empty.json
+
+-- all.json --
+{
+  "packages": ["hello@latest", "vim@latest", "cowsay@latest", "php@latest"]
+}
+
+-- cowsay.json --
+{
+  "packages": ["cowsay@latest"]
+}
+
+
+-- empty.json --
+{
+  "packages": []
+}

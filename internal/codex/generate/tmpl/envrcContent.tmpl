@@ -1,0 +1,8 @@
+use_codex() {
+    watch_file codex.json
+    eval "$(codex shellenv --init-hook --install --no-refresh-alias{{ if .EnvFlag }} {{ .EnvFlag }}{{ end }})"
+}
+use codex
+{{ if .EnvFile }}
+dotenv_if_exists {{ .EnvFile }}
+{{ end }}

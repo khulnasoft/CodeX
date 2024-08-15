@@ -1,0 +1,28 @@
+# Testscript to ensure lockfile is updated to remove the older version of a package
+
+# start with a codex.json having go@1.19
+cp codex_original.json codex.json
+exec codex install
+codexlock.packages.contains codex.lock go@1.19
+
+# change codex.json to instead have go@1.20
+cp codex_changed.json codex.json
+exec codex install
+codexlock.packages.contains codex.lock go@1.20
+! codexlock.packages.contains codex.lock go@1.19
+
+
+-- codex_original.json --
+ {
+   "packages": [
+     "go@1.19"
+   ]
+ }
+
+-- codex_changed.json --
+{
+  "packages": [
+    "go@1.20"
+  ]
+}
+

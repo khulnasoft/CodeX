@@ -1,0 +1,13 @@
+{
+    "name": "valkey",
+    "version": "0.0.1",
+    "description": "Running `codex services start valkey` will start valkey as a daemon in the background. \n\nYou can manually start Valkey in the foreground by running `valkey-server $VALKEY_CONF --port $VALKEY_PORT`. \n\nLogs, pidfile, and data dumps are stored in `.codex/virtenv/valkey`. You can change this by modifying the `dir` directive in `codex.d/valkey/valkey.conf`",
+    "env": {
+        "VALKEY_PORT": "6379",
+        "VALKEY_CONF": "{{ .CodexDir }}/valkey.conf"
+    },
+    "create_files": {
+        "{{ .CodexDir }}/valkey.conf": "valkey/valkey.conf",
+        "{{ .Virtenv }}/process-compose.yaml": "valkey/process-compose.yaml"
+    }
+}

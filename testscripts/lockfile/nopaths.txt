@@ -1,0 +1,23 @@
+# Test installing a package without outputs in the store path. 
+# NOTE: Purposefully using a weird version to ensure it is not already in store.
+
+exec codex run curl --version | grep -o 'curl\s7\.87\.0'
+stdout 'curl 7.87.0'
+
+-- codex.json --
+{
+  "packages": ["curl@7.87.0"],
+}
+
+-- codex.lock --
+{
+  "lockfile_version": "1",
+  "packages": {
+    "curl@7.87.0": {
+      "last_modified": "2023-02-26T03:47:33Z",
+      "resolved": "github:NixOS/nixpkgs/9952d6bc395f5841262b006fbace8dd7e143b634#curl",
+      "source": "codex-search",
+      "version": "7.87.0"
+    }
+  }
+}

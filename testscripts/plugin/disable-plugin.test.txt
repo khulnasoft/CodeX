@@ -1,0 +1,34 @@
+# Testscript for testing disable plugin
+
+exec codex init
+exec codex add python --disable-plugin
+! stderr 'This plugin' 
+
+json.superset codex.json expected_codex.json
+
+! exec codex run ls .codex/virtenv/python
+
+# remove disable plugin option
+exec codex add python
+
+json.superset codex.json expected_codex2.json
+
+-- expected_codex.json --
+{
+  "packages": {
+    "python": {
+      "version": "latest",
+      "disable_plugin": true
+    }
+  }
+}
+
+-- expected_codex2.json --
+{
+  "packages": {
+    "python": {
+      "version": "latest",
+      "disable_plugin": false
+    }
+  }
+}

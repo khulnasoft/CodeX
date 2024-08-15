@@ -1,0 +1,14 @@
+{{/* 
+    This wraps user scripts in codex.json. The idea is to only run the init 
+    hooks once, even if the init hook calls codex run again. This will also
+    protect against using codex service in the init hook.
+
+    Scripts always use sh to run, so POSIX is OK. We don't (yet) support fish
+    scripts. (though users can run a fish script within their script)
+*/ -}}
+
+if [ -z "${{ .SkipInitHookHash }}" ]; then
+    . {{ .InitHookPath }}
+fi
+
+{{ .Body }}

@@ -1,0 +1,43 @@
+# Testscript for exercising adding packages
+
+exec codex init
+
+# Add a package that is not part of the Codex Search index.
+# This exercises the fallback codepath for adding packages.
+exec codex add stdenv.cc.cc.lib
+json.superset codex.json expected_codex1.json
+
+# Add regular packages. Even though this is the more common scenario,
+# we test this later, because the source.path below removes "codex"
+# from the PATH.
+! exec rg --version
+! exec vim --version
+exec codex add ripgrep vim
+
+exec codex shellenv
+source.path
+exec rg --version
+exec vim --version
+json.superset codex.json expected_codex2.json
+
+-- codex.json --
+{
+  "packages": [
+  ]
+}
+
+-- expected_codex1.json --
+{
+  "packages": [
+    "stdenv.cc.cc.lib"
+  ]
+}
+
+-- expected_codex2.json --
+{
+  "packages": [
+    "ripgrep@latest",
+    "vim@latest",
+    "stdenv.cc.cc.lib"
+  ]
+}

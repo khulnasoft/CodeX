@@ -1,0 +1,2 @@
+env CODEX_FEATURE_SCRIPT_EXIT_ON_ERROR=1
+exec codex run run_test

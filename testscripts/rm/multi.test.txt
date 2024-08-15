@@ -1,0 +1,16 @@
+exec codex init
+
+exec codex add hello vim
+exec codex run hello
+stdout 'Hello, world!'
+
+exec codex rm vim hello
+! exec codex run hello
+! exec codex run vim
+
+json.superset codex.json expected.json
+
+-- expected.json --
+{
+  "packages": []
+}

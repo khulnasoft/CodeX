@@ -1,0 +1,12 @@
+# ensure that we escape the arguments to `codex run`
+
+exec codex init
+exec codex run -- echo 'this is a "hello world"'
+stdout 'this is a "hello world"'
+
+env FOO=bar
+exec codex run echo '$FOO'
+stdout 'bar'
+
+exec codex run echo "$FOO"
+stdout 'bar'

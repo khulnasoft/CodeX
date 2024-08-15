@@ -1,0 +1,16 @@
+# Testscript for exercising adding packages
+
+! exec rg --version
+! exec vim --version
+exec codex global add ripgrep vim
+
+exec codex global shellenv --recompute
+source.path
+exec rg --version
+exec vim --version
+
+-- codex.json --
+{
+  "packages": [
+  ]
+}

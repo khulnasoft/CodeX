@@ -1,0 +1,13 @@
+# Test passing arguments to a script
+exec codex run ekko hello there
+stdout 'hello there'
+
+-- codex.json --
+{
+  "packages": [],
+  "shell": {
+    "scripts": {
+      "ekko": "echo $@"
+    }
+  }
+}

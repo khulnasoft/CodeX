@@ -1,0 +1,32 @@
+# Testscript for testing plugin
+
+exec codex init
+exec codex add python
+stderr 'This plugin'
+
+exec codex run ls .codex/virtenv/python
+
+json.superset codex.json expected_codex.json
+
+exec codex add python --disable-plugin
+exec codex add hello
+
+json.superset codex.json expected_codex2.json
+
+-- expected_codex.json --
+{
+  "packages": [
+    "python@latest"
+  ]
+}
+
+-- expected_codex2.json --
+{
+  "packages": {
+    "hello": "latest",
+    "python": {
+      "version": "latest",
+      "disable_plugin": true
+    }
+  }
+}

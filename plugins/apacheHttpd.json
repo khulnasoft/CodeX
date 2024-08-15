@@ -1,0 +1,17 @@
+{
+  "name": "apache",
+  "version": "0.0.2",
+  "description": "If you with to edit the config file, please copy it out of the .codex directory.",
+  "env": {
+    "HTTPD_CODEX_CONFIG_DIR": "{{ .CodexProjectDir }}",
+    "HTTPD_CONFDIR": "{{ .CodexDir }}",
+    "HTTPD_ERROR_LOG_FILE": "{{ .Virtenv }}/error.log",
+    "HTTPD_ACCESS_LOG_FILE": "{{ .Virtenv }}/access.log",
+    "HTTPD_PORT": "8080"
+  },
+  "create_files": {
+    "{{ .CodexDir }}/httpd.conf": "apache/httpd.conf",
+    "{{ .CodexDirRoot }}/web/index.html": "web/index.html",
+    "{{ .Virtenv }}/process-compose.yaml": "apache/process-compose.yaml"
+  }
+}

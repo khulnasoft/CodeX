@@ -1,0 +1,11 @@
+exec codex init
+exec codex info hello
+stdout 'hello '
+
+exec codex init
+exec codex info hello@latest
+stdout 'hello '
+
+exec codex init
+! exec codex info notapackage
+stderr 'Package "notapackage" not found'

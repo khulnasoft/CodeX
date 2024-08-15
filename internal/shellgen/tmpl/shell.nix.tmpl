@@ -1,0 +1,11 @@
+let
+  pkgs = import
+    (fetchTarball {
+      url = "{{ .NixpkgsInfo.TarURL }}";
+    })
+    { };
+in
+with pkgs;
+mkShell {
+  packages = [];
+}

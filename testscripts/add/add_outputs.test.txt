@@ -1,0 +1,32 @@
+# Testscript to add packages with non-default outputs
+
+exec codex init
+
+# Add prometheus with default outputs. It will not have promtool.
+exec codex add prometheus
+exec codex run -- prometheus --version
+! exec codex run -- promtool --version
+
+# Add prometheus with cli and out outputs. It will have promtool as well.
+exec codex add prometheus --outputs cli,out
+json.superset codex.json expected_codex.json
+exec codex run -- promtool --version
+exec codex run -- prometheus --version
+
+
+
+-- codex.json --
+{
+  "packages": [
+  ]
+}
+
+-- expected_codex.json --
+{
+  "packages": {
+    "prometheus": {
+      "version": "latest",
+      "outputs": ["cli", "out"]
+    }
+  }
+}

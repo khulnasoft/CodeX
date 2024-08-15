@@ -1,0 +1,4 @@
+exec codex init
+exec codex generate direnv
+exists .envrc
+

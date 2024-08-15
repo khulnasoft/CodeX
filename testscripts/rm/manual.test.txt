@@ -1,0 +1,18 @@
+exec codex run hello
+stdout 'Hello, world!'
+
+# Simulate deleting the packages manually.
+cp empty.json codex.json
+
+! exec codex run hello
+! stdout 'Hello, world!'
+
+-- codex.json --
+{
+  "packages": ["hello"]
+}
+
+-- empty.json --
+{
+  "packages": []
+}

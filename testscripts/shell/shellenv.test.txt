@@ -1,0 +1,12 @@
+exec codex init
+
+# test adding and running hello
+exec codex add hello
+! exec hello
+! stdout .
+
+# source shellenv and test again
+exec codex shellenv
+source.path
+exec hello
+stdout 'Hello, world!'

@@ -1,0 +1,15 @@
+{
+    "$schema": "https://raw.githubusercontent.com/khulnasoft/codex/main/.schema/codex-plugin.schema.json",
+    "version": "0.0.2",
+    "name": "nodejs",
+    "readme": "Codex automatically configures Corepack for Nodejs when CODEX_COREPACK_ENABLED=1. You can install Yarn or Pnpm by adding them to your `package.json` file using `packageManager`\nCorepack binaries will be installed in your local `.codex` directory",
+    "shell": {
+        "init_hook": [
+            "test -z $CODEX_COREPACK_ENABLED || corepack enable --install-directory \"{{ .Virtenv }}/corepack-bin/\"",
+            "test -z $CODEX_COREPACK_ENABLED || export PATH=\"{{ .Virtenv }}/corepack-bin/:$PATH\""
+        ]
+    },
+    "create_files": {
+      "{{ .Virtenv }}/corepack-bin": ""
+    }
+}

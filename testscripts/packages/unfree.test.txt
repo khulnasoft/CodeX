@@ -1,0 +1,9 @@
+# Test ensures that we can add and remove "unfree" nix packages
+
+exec codex init
+
+# we could test with slack and/or vscode. Using slack since it is lighter.
+exec codex add slack
+stderr 'Adding package "slack@latest" to codex.json'
+
+exec codex rm slack

@@ -1,0 +1,15 @@
+# Start on an empty directory and check that codex init works correctly.
+
+! exists codex.json
+exec codex init
+exists codex.json
+
+json.superset codex.json expected.json
+
+# Second init should be a no-op.
+exec codex init
+
+-- expected.json --
+{
+  "packages": []
+}

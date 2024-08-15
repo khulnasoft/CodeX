@@ -1,0 +1,29 @@
+{{- if .RootUser }}FROM khulnasoftcom/codex-root-user:latest
+{{- else }}FROM khulnasoftcom/codex:latest
+{{- end}}
+
+# Installing your codex project
+WORKDIR /code
+{{- if not .RootUser }}
+USER root:root
+RUN mkdir -p /code && chown ${CODEX_USER}:${CODEX_USER} /code
+USER ${CODEX_USER}:${CODEX_USER}
+COPY --chown=${CODEX_USER}:${CODEX_USER} codex.json codex.json
+COPY --chown=${CODEX_USER}:${CODEX_USER} codex.lock codex.lock
+{{- else}}
+COPY codex.json codex.json
+COPY codex.lock codex.lock
+{{- end}}
+
+{{if len .LocalFlakeDirs}}
+# Copying local flakes directories
+{{- end}}
+{{range $i, $element := .LocalFlakeDirs -}}
+COPY {{$element}} {{$element}}
+{{end}}
+RUN codex run -- echo "Installed Packages."
+{{if .IsDevcontainer}}
+RUN codex shellenv --init-hook >> ~/.profile
+{{- else}}
+CMD ["codex", "shell"]
+{{- end}}

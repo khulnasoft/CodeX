@@ -1,0 +1,32 @@
+{
+  "packages": [
+    "jdk@17",
+    "gradle@latest",
+    "mysql80@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to codex!'\n",
+      "echo 'Setup MySQL by running `codex run setup_db`",
+      "echo 'Run the example using `codex run bootRun"
+    ],
+    "scripts": {
+      "bootRun": [
+        "codex services up -b",
+        "./gradlew bootRun",
+        "codex services stop"
+      ],
+      "build": [
+        "./gradlew build"
+      ],
+      "setup_db": [
+        "codex services up mysql -b",
+        "mysql -u root < setup_db.sql",
+        "codex services stop"
+      ],
+      "test": [
+        "./gradlew test"
+      ]
+    }
+  }
+}

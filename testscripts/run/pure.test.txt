@@ -1,0 +1,21 @@
+# Tests related to having codex run in pure mode.
+
+env FOO=bar
+env FOO2=bar2
+
+exec codex run --pure echo '$FOO'
+stdout 'baz'
+
+exec codex run --pure echo '$FOO2'
+stdout ''
+
+exec codex run --pure hello
+stdout 'Hello, world!'
+
+-- codex.json --
+{
+  "packages": ["hello@latest"],
+  "env": {
+    "FOO": "baz"
+  }
+}

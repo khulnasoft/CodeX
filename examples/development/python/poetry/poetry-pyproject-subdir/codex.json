@@ -1,0 +1,24 @@
+{
+  "packages": [
+    "poetry@latest",
+    "python3@latest"
+  ],
+  "env": {
+    "CODEX_PYPROJECT_DIR": "$PWD/service"
+  },
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to codex!' > /dev/null"
+    ],
+    "scripts": {
+      "install-service":[
+        "cd service",
+        "poetry install"
+      ],
+      "run_test": [
+        "codex run install-service",
+        "cd service && poetry run pytest"
+      ]
+    }
+  }
+}

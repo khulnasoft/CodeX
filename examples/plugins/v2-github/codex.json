@@ -1,0 +1,18 @@
+{
+  "packages": [],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to codex!' > /dev/null"
+    ],
+    "scripts": {
+      "run_test": [
+        "./test.sh"
+      ]
+    }
+  },
+  "include": [
+    // TODO, make these more interesting by adding v2 capabilities
+    "github:khulnasoft/codex-plugin-example",
+    "github:khulnasoft/codex-plugin-example?dir=custom-dir"
+  ]
+}

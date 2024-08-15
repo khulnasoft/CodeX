@@ -1,0 +1,5 @@
+# Do not support shell inception
+exec codex init
+env CODEX_SHELL_ENABLED=1
+! exec codex shell
+stderr 'Error: You are already in an active codex shell.'

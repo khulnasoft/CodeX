@@ -1,0 +1,21 @@
+{
+  "packages": [
+    "mysql80@latest"
+  ],
+  "shell": {
+    "init_hook": [],
+    "scripts": {
+      "connect_db": [
+        "mysql -u codex_user -p -D codex_lamp"
+      ],
+      "test_db_setup": [
+        "mkdir -p /tmp/codex/mariadb/run",
+        "export MYSQL_UNIX_PORT=/tmp/codex/mariadb/run/mysql.sock",
+        "codex services up -b",
+        "sleep 5",
+        "mysql -u root < setup_db.sql",
+        "codex services stop"
+      ]
+    }
+  }
+}

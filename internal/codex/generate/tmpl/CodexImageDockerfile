@@ -1,0 +1,31 @@
+FROM debian:stable-slim
+
+# Optional arg to install custom codex version
+ARG CODEX_USE_VERSION
+
+# Step 1: Installing dependencies
+RUN apt-get update
+RUN apt-get -y install bash binutils git xz-utils wget sudo
+
+# Step 1.5: Setting up codex user
+ENV CODEX_USER=codex
+RUN adduser $CODEX_USER
+RUN usermod -aG sudo $CODEX_USER
+RUN echo "codex ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$CODEX_USER
+USER $CODEX_USER
+
+# Step 2: Installing Nix
+RUN wget --output-document=/dev/stdout https://nixos.org/nix/install | sh -s -- --no-daemon
+RUN . ~/.nix-profile/etc/profile.d/nix.sh
+
+ENV PATH="/home/${CODEX_USER}/.nix-profile/bin:$PATH"
+
+# Step 3: Installing codex
+ENV CODEX_USE_VERSION=$CODEX_USE_VERSION
+RUN wget --quiet --output-document=/dev/stdout https://get.khulnasoft/codex   | bash -s -- -f
+RUN chown -R "${CODEX_USER}:${CODEX_USER}" /usr/local/bin/codex
+
+# run a codex command to make launcher download codex binary
+RUN codex version
+
+CMD ["codex", "version", "-v"]
