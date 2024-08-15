@@ -1,4 +1,4 @@
-// Copyright 2024 Khulnasoft Inc. and contributors. All rights reserved.
+// Copyright 2024 Khulnasoft Ltd. and contributors. All rights reserved.
 // Use of this source code is governed by the license in the LICENSE file.
 
 // Package conf is future home of the config (codex.json) management code.
