@@ -6,7 +6,7 @@ Zig projects can be run in Codex by adding Zig and Nimble to your project.
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/zig/zig-hello-world)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/zig)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/zig)
 
 ## Adding Zig to your Project
 

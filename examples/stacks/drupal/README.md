@@ -2,7 +2,7 @@
 
 This example shows how to run a Drupal application in Codex. It makes use of the PHP and Apache Plugins, while demonstrating how to configure a MariaDB instance to work with Codex Cloud.
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/drupal)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/drupal)
 
 ## How to Run the example
 

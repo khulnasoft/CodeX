@@ -1,6 +1,6 @@
 # Maelstrom
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/github.com/khulnasoft/codex-examples?folder=cloud_development/maelstrom)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/github.com/khulnasoft/codex-examples?folder=cloud_development/maelstrom)
 
 A Codex for running [Maelstrom](https://github.com/jepsen-io/maelstrom) Tests. Maelstrom is a testing library for toy distributed systems built by @aphyr, useful for learning the basics and principals of building distributed systems
 
@@ -14,7 +14,7 @@ If you don't already have [Codex](https://www.khulnasoft/codex/docs/installing_c
 curl -s https://get.khulnasoft/install.sh | bash
 ```
 
-You can skip this step if you're running on Codex.sh
+You can skip this step if you're running on Codex.khulnasoft.com
 
 ## Usage
 

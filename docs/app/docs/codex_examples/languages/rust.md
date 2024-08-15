@@ -6,7 +6,7 @@ The easiest way to manage Rust with Codex is to install `rustup`, and then confi
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/rust)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/rust)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/rust)
 
 ```json
 {

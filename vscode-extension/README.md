@@ -6,7 +6,7 @@ This is the official VSCode extension for [codex](https://github.com/khulnasoft/
 
 ### Open In VSCode button
 
-If a Codex Cloud instance (from [codex.sh](https://codex.sh)) has an `Open In Desktop` button, this extension will make VSCode to be able to connect its workspace to the instance.
+If a Codex Cloud instance (from [codex.khulnasoft.com](https://codex.khulnasoft.com)) has an `Open In Desktop` button, this extension will make VSCode to be able to connect its workspace to the instance.
 
 ### Auto Shell on a codex project
 

@@ -5,7 +5,7 @@ MariaDB can be automatically configured for your dev environment by Codex via th
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/databases/mariadb)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/mariadb)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/mariadb)
 
 ## Adding MariaDB to your Shell
 

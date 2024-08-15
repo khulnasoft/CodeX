@@ -8,7 +8,7 @@ This example shows how to build a simple Laravel application backed by MariaDB a
 
 [Example Repo](https://github.com/khulnasoft/codex/tree/main/examples/stacks/laravel)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/github.com/khulnasoft/codex/?folder=examples/stacks/laravel)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/github.com/khulnasoft/codex/?folder=examples/stacks/laravel)
 
 ## How to Run
 

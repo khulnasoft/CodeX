@@ -21,8 +21,8 @@ import (
 // These must match what's in sshConfigTmpl. We should eventually make the hosts
 // a template variable.
 const (
-	gatewayProdHost = "gateway.codex.sh"
-	gatewayDevHost  = "gateway.dev.codex.sh"
+	gatewayProdHost = "gateway.codex.khulnasoft.com"
+	gatewayDevHost  = "gateway.dev.codex.khulnasoft.com"
 )
 
 //go:embed sshconfig.tmpl
@@ -41,7 +41,7 @@ func SetupCodex() error {
 
 // SetupInsecureDebug is like SetupCodex, but also configures an additional
 // gateway with host key checking disabled. If gatewayAddr is a
-// well-known *.codex.sh gateway, then SetupInsecureDebug doesn't add any
+// well-known *.codex.khulnasoft.com gateway, then SetupInsecureDebug doesn't add any
 // extra hosts and acts identically to SetupCodex.
 func SetupInsecureDebug(gatewayAddr string) error {
 	host, port := splitHostPort(gatewayAddr)

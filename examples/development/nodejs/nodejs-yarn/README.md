@@ -2,7 +2,7 @@
 
 Most NodeJS Projects will install their dependencies locally using NPM or Yarn, and thus can work with Codex with minimal additional configuration. Per project packages can be managed via NPM or Yarn.
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/node-npm)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/node-npm)
 
 ## Adding NodeJS to your Shell
 

@@ -52,16 +52,16 @@ func TestCodexIncludeRegex(t *testing.T) {
 
 func TestHostOrMatchRegex(t *testing.T) {
 	tests := map[string]bool{
-		`Host *.codex.sh`:   true,
-		`  Host *.codex.sh`: true,
-		"\tHost *.codex.sh": true,
+		`Host *.codex.khulnasoft.com`:   true,
+		`  Host *.codex.khulnasoft.com`: true,
+		"\tHost *.codex.khulnasoft.com": true,
 		`Match all`:          true,
 		`  Match all`:        true,
 		"\tMatch all":        true,
 
 		"Host":               false,
-		"Hostname codex.sh": false,
-		`# Host *.codex.sh`: true,
+		"Hostname codex.khulnasoft.com": false,
+		`# Host *.codex.khulnasoft.com`: true,
 		`# Match all`:        true,
 	}
 	for in, match := range tests {

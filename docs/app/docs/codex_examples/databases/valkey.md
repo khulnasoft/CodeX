@@ -6,7 +6,7 @@ Valkey can be configured automatically using Codex's built in Valkey plugin. Thi
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/databases/valkey)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/valkey)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/valkey)
 
 ## Adding Valkey to your shell
 

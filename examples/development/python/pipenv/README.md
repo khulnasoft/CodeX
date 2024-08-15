@@ -21,7 +21,7 @@ This will install Python 3.10 in your shell. You can find other versions of Pyth
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/python/pipenv)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/python-pipenv)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/python-pipenv)
 
 [pipenv](https://pipenv.pypa.io/en/latest/) is a tool that will automatically set up a virtual environment for installing your PyPi packages.
 

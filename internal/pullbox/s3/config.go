@@ -15,7 +15,7 @@ import (
 // buckets and roles. Would require removing user from this lib.
 const (
 	roleArn = "arn:aws:iam::984256416385:role/KhulnasoftS3Federated"
-	bucket  = "codex.sh"
+	bucket  = "codex.khulnasoft.com"
 	// this is a fixed value the bucket resides in this region, otherwise,
 	// user's default region will get pulled from config and region mismatch
 	// will result in user not being able to run global push

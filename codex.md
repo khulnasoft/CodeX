@@ -8,7 +8,7 @@ This project uses [codex](https://github.com/khulnasoft/codex) to manage its dev
 
 Install codex:
 ```sh
-curl -fsSL https://get.khulnasoft/codex | bash
+curl -fsSL https://raw.githubusercontent.com/khulnasoft/codex/master/install.sh | bash
 ```
 
 Start the codex shell:

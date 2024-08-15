@@ -4,7 +4,7 @@ Laravel is a powerful web application framework built with PHP. It's a great cho
 
 This example shows how to build a simple Laravel application backed by MariaDB and Redis. It uses Codex Plugins for all 3 Nix packages to simplify configuration
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/github.com/khulnasoft/codex/?folder=examples/stacks/laravel)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/github.com/khulnasoft/codex/?folder=examples/stacks/laravel)
 
 ## How to Run
 

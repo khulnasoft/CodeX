@@ -6,7 +6,7 @@ Go projects can be run in Codex by adding the Go SDK to your project. If your pr
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/go/hello-world)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/go)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/go)
 
 ## Adding Go to your Project
 

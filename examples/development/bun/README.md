@@ -4,7 +4,7 @@ Bun projects can be run in Codex by adding the Bun runtime + package manager to 
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/bun)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/bun)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/bun)
 
 ## Add Bun to your Project
 

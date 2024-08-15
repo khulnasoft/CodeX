@@ -57,7 +57,7 @@ export function activate(context: ExtensionContext) {
 		}
 	});
 
-	const codexShell = commands.registerCommand('codex.shell', async () => {
+	const codexShell = commands.registerCommand('codex.khulnasoft.comell', async () => {
 		// todo: add support for --config path to codex.json
 		await runInTerminal('codex shell', true);
 	});

@@ -14,7 +14,7 @@ The easiest way to develop Codex is with Codex!
 
 1. Install Codex:
 
-       curl -fsSL https://get.khulnasoft/codex | bash
+       curl -fsSL https://raw.githubusercontent.com/khulnasoft/codex/master/install.sh | bash
 
 2. Clone this repository:
 

@@ -16,7 +16,7 @@ This quickstart shows you how to install Codex, and use it to start a developmen
 Use the following install script to get the latest version of Codex:
 
 ```bash
-curl -fsSL https://get.khulnasoft/codex | bash
+curl -fsSL https://raw.githubusercontent.com/khulnasoft/codex/master/install.sh | bash
 ```
 
 Codex requires the [Nix Package Manager](https://nixos.org/download.html). If Nix is not detected on your machine when running a command, Codex will automatically install it for you with the default settings for your OS. Don't worry: You can use Codex without needing to learn the Nix Language.

@@ -4,7 +4,7 @@ title: Ruby
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/ruby)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/ruby)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/ruby)
 
 Ruby can be automatically configured by Codex via the built-in Ruby Plugin. This plugin will activate automatically when you install Ruby 2.7 using `codex add ruby`.
 

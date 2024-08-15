@@ -6,7 +6,7 @@ Most NodeJS Projects will install their dependencies locally using NPM or Yarn, 
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/nodejs)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/node-npm)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/node-npm)
 
 ## Adding NodeJS to your Shell
 
@@ -41,13 +41,13 @@ To disable Corepack, remove the `CODEX_COREPACK_ENABLED` variable from your code
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/nodejs/nodejs-yarn)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/node-yarn)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/node-yarn)
 
 ### pnpm
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/nodejs/nodejs-pnpm)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/node-pnpm)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/node-pnpm)
 
 ## Installing Global Packages
 

@@ -4,7 +4,7 @@ NGINX can be automatically configured by Codex via the built-in NGINX Plugin. Th
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/servers/nginx)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/nginx)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/nginx)
 
 ## Adding NGINX to your Shell
 

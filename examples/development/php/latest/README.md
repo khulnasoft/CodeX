@@ -4,7 +4,7 @@ PHP projects can manage most of their dependencies locally with `composer`. Some
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/php/latest)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/php)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/php)
 
 ## Adding PHP to your Project
 

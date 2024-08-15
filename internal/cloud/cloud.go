@@ -35,7 +35,7 @@ import (
 func SSHSetup(username string) (*openssh.Cmd, error) {
 	sshCmd := &openssh.Cmd{
 		Username:        username,
-		DestinationAddr: "gateway.codex.sh",
+		DestinationAddr: "gateway.codex.khulnasoft.com",
 	}
 	// When developing we can use this env variable to point
 	// to a different gateway

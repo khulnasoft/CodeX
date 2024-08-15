@@ -18,7 +18,7 @@ Codex最初由 [Khulnasoft](https://www.khulnasoft) 进行开发，其内部由 
 
 你可以点击下面的按钮在浏览器中试用 Codex：
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/new)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/new)
 
 下面的例子创建了一个带有 `python 2.7` 和 `go 1.18` 的开发环境，尽管这些包并没有在底层机器中被安装。
 
@@ -29,7 +29,7 @@ Codex最初由 [Khulnasoft](https://www.khulnasoft) 进行开发，其内部由 
 使用以下安装脚本获取最新版本的 Codex：
 
 ```sh
-curl -fsSL https://get.khulnasoft/codex | bash
+curl -fsSL https://raw.githubusercontent.com/khulnasoft/codex/master/install.sh | bash
 ```
 
 在 [Codex 文档](https://www.khulnasoft/codex/docs/installing_codex/)中阅读更多内容。

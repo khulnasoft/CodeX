@@ -18,7 +18,7 @@ import (
 	"github.com/khulnasoft/codex/internal/redact"
 )
 
-const searchAPIEndpoint = "https://search.codex.sh"
+const searchAPIEndpoint = "https://search-codex.khulnasoft.com"
 
 var ErrNotFound = errors.New("Not found")
 

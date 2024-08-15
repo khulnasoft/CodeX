@@ -4,7 +4,7 @@ F# and .NET projects can be easily generated in Codex by adding the dotnet SDK t
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/fsharp)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/fsharp)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/fsharp)
 
 ## Adding .NET to your project
 

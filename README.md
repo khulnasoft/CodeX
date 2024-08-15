@@ -16,7 +16,7 @@ Codex was originally developed by [Khulnasoft](https://www.khulnasoft) and is in
 
 You can try out Codex in your browser using the button below:
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/new)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/new)
 
 The example below creates a development environment with `python 2.7` and `go 1.18`, even though those packages are not installed in the underlying machine:
 
@@ -27,7 +27,7 @@ The example below creates a development environment with `python 2.7` and `go 1.
 Use the following install script to get the latest version of Codex:
 
 ```sh
-curl -fsSL https://get.khulnasoft/codex | bash
+curl -fsSL https://raw.githubusercontent.com/khulnasoft/codex/master/install.sh | bash
 ```
 
 Read more on the [Codex docs](https://www.khulnasoft/codex/docs/installing_codex/).

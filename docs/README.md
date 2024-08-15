@@ -4,7 +4,7 @@ This website is built using [Docusaurus 2](https://docusaurus.io/), a modern sta
 
 You can also test and contribute to our docs online using Codex Cloud!
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/github.com/khulnasoft/codex?folder=docs/app)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/github.com/khulnasoft/codex?folder=docs/app)
 
 ## Installation
 

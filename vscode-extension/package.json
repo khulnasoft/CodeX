@@ -63,7 +63,7 @@
         "title": "Codex: Run - execute scripts specified in codex.json"
       },
       {
-        "command": "codex.shell",
+        "command": "codex.khulnasoft.comell",
         "title": "Codex: Shell - Go to codex shell in the terminal"
       },
       {
@@ -106,7 +106,7 @@
           "when": "codex.configFileExists == true"
         },
         {
-          "command": "codex.shell",
+          "command": "codex.khulnasoft.comell",
           "when": "codex.configFileExists == true"
         },
         {

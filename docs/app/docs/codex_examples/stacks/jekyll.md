@@ -6,7 +6,7 @@ This example demonstrates how to create and run a Jekyll blog in Codex. It makes
 
 [Example Repo](https://github.com/khulnasoft/codex/tree/main/examples/stacks/jekyll)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/jekyll)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/jekyll)
 
 Inspired by https://litchipi.github.io/nix/2023/01/12/build-jekyll-blog-with-nix.html 
 

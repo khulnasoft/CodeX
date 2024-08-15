@@ -13,13 +13,13 @@ While you can open any Github Repo in a Codex playground, you will need a `codex
 
 ### Can I use my own IDE or editor with a Codex playground?
 
-Codex.sh provides a Cloud IDE that you can use to edit your projects in the browser, but you can also open your project in your local VSCode Editor by clicking the `Open in Desktop` button.
+Codex.khulnasoft.com provides a Cloud IDE that you can use to edit your projects in the browser, but you can also open your project in your local VSCode Editor by clicking the `Open in Desktop` button.
 
 You can also use your own tools when you connect to the VM via SSH. See our [Getting Started Guide](index.mdx) for more details.
 
-### Do I have to pay to use Codex.sh?
+### Do I have to pay to use Codex.khulnasoft.com?
 
-Codex.sh is free to use during the Beta period, subject to the restrictions described below.
+Codex.khulnasoft.com is free to use during the Beta period, subject to the restrictions described below.
 
 ### What are the resource limits for Codex playgrounds
 
@@ -31,7 +31,7 @@ If you are interested in using Codex playgrounds or CDE in an enterprise setting
 
 ### Is there a time limit on Codex playgrounds?
 
-Your playground will be suspended after 4 hours of inactivity, and can be restarted by reopening the playground from your [dashboard](https://codex.sh/app/projects).
+Your playground will be suspended after 4 hours of inactivity, and can be restarted by reopening the playground from your [dashboard](https://codex.khulnasoft.com/app/projects).
 
 playgrounds are also deleted every 12 hours, regardless of activity
 
@@ -39,16 +39,16 @@ playgrounds are also deleted every 12 hours, regardless of activity
 
 Please contact us at info@khulnasoft if you are interested in a custom solution for your enterprise.
 
-### What OS does the Codex.sh use?
+### What OS does the Codex.khulnasoft.com use?
 
 Debian Linux, running on a x86-64 platform
 
 ### How many VM's can I run concurrently?
 
-You can have up to 5 concurrent projects per Github Account. To run more playgrounds, you can visit your [Dashboard](https://codex.sh/app/projects) to delete older playgrounds
+You can have up to 5 concurrent projects per Github Account. To run more playgrounds, you can visit your [Dashboard](https://codex.khulnasoft.com/app/projects) to delete older playgrounds
 
 ### Where does Codex run my playground?
 
-Codex VMs are run as Fly Machines in local Data Centers. To minimize latency, Codex.sh will attempt to create a Fly Machine as close to your current location as possible.
+Codex VMs are run as Fly Machines in local Data Centers. To minimize latency, Codex.khulnasoft.com will attempt to create a Fly Machine as close to your current location as possible.
 
 

@@ -50,7 +50,7 @@ export async function handleOpenInVSCode(uri: Uri) {
 
 async function getVMInfo(token: string | null, vmId: string | null): Promise<any> {
   // send post request to gateway to get vm info and ssh keys
-  const gatewayHost = 'https://api.codex.sh/g/vm_info';
+  const gatewayHost = 'https://api.codex.khulnasoft.com/g/vm_info';
   const data = new FormData();
   data.append("vm_id", vmId);
   console.debug("calling codex to get vm_info...");
@@ -61,7 +61,7 @@ async function getVMInfo(token: string | null, vmId: string | null): Promise<any
       authorization: `Bearer ${token}`
     }
   });
-  console.debug("API Call to api.codex.sh response: " + response);
+  console.debug("API Call to api.codex.khulnasoft.com response: " + response);
   return response;
 }
 

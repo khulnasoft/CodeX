@@ -4,7 +4,7 @@ info:
   version: 2.0.0
   description: API for searching and resolving package dependencies
 servers:
-  - url: https://search.codex.sh/v2
+  - url: https://search-codex.khulnasoft.com/v2
 paths:
   /pkg:
     get:

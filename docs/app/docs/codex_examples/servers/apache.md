@@ -6,7 +6,7 @@ Apache can be automatically configured by Codex via the built-in Apache Plugin. 
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/servers/apache)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/apache)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/apache)
 
 ### Adding Apache to your Shell
 

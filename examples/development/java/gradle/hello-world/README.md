@@ -26,7 +26,7 @@ Other distributions of the JDK (such as OracleJDK and Eclipse Temurin) are avail
 
 [**Example Repo**](https://github.com/khulnasoft/codex/tree/main/examples/development/java/gradle/hello-world)
 
-[![Open In Codex.sh](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.sh/open/templates/java-gradle)
+[![Open In Codex.khulnasoft.com](https://www.khulnasoft/img/codex/open-in-codex.svg)](https://codex.khulnasoft.com/open/templates/java-gradle)
 
 Gradle is a popular, multi-language build tool that is commonly used with JVM projects. To setup an example project using Gradle, follow the instructions below:
 
