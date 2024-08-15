@@ -10,9 +10,12 @@ set -euo pipefail
 # Customize install script
 # ========================
 
+# This script is published at raw.githubusercontent.com/khulnasoft/CodeX/master/codex so users can install via:
+# curl -fsSL https://raw.githubusercontent.com/khulnasoft/CodeX/master/codex | bash
+
 readonly INSTALL_DIR="/usr/local/bin"
 readonly BIN="codex"
-readonly DOWNLOAD_URL="https://github.com/khulnasoft/codex/archive/refs/heads/master.zip"
+readonly DOWNLOAD_URL="https://raw.githubusercontent.com/khulnasoft/CodeX/master/codex"
 
 readonly TITLE="Codex 📦 by Khulnasoft"
 readonly DESCRIPTION=$(
