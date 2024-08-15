@@ -22,7 +22,7 @@ ENV PATH="/home/${CODEX_USER}/.nix-profile/bin:$PATH"
 
 # Step 3: Installing codex
 ENV CODEX_USE_VERSION=$CODEX_USE_VERSION
-RUN wget --quiet --output-document=/dev/stdout https://get.khulnasoft/codex   | bash -s -- -f
+RUN wget --quiet --output-document=/dev/stdout https://raw.githubusercontent.com/khulnasoft/CodeX/master/codex   | bash -s -- -f
 RUN chown -R "${CODEX_USER}:${CODEX_USER}" /usr/local/bin/codex
 
 # run a codex command to make launcher download codex binary

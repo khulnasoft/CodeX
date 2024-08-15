@@ -86,7 +86,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install codex
-        uses: khulnasoft/codex-install-action@v0.11.0
+        uses: khulnasoft/codex-install-action@main
         with:
           enable-cache: true
 

@@ -25,7 +25,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            khulnasoftcom/codex
+            khulnasoft/codex
           tags: |
             type=raw,value=${{ inputs.tag || github.ref_name }}
           flavor: |
@@ -35,7 +35,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            khulnasoftcom/codex-root-user
+            khulnasoft/codex-root-user
           tags: |
             type=raw,value=${{ inputs.tag || github.ref_name }}
           flavor: |
@@ -72,7 +72,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            khulnasoftcom/codex
+            khulnasoft/codex
           tags: |
             type=raw,value=latest
           flavor: |
@@ -90,7 +90,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            khulnasoftcom/codex-root-user
+            khulnasoft/codex-root-user
           tags: |
             type=raw,value=latest
           flavor: |

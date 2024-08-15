@@ -18,7 +18,7 @@ func (d *Codex) UninitializedSecrets(ctx context.Context) *envsec.Envsec {
 		},
 		IsDev:      build.IsDev,
 		Stderr:     d.stderr,
-		Store:      &KhulnasoftAPIStore{},
+		Store:      &jetstore.KhulnasoftAPIStore{},
 		WorkingDir: d.ProjectDir(),
 	}
 }
