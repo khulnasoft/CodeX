@@ -27,7 +27,7 @@ The example below creates a development environment with `python 2.7` and `go 1.
 Use the following install script to get the latest version of Codex:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/khulnasoft/codex/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/khulnasoft/CodeX/master/codex | bash
 ```
 
 Read more on the [Codex docs](https://www.khulnasoft/codex/docs/installing_codex/).

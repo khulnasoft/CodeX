@@ -27,7 +27,7 @@ Codex는 원래 [Khulnasoft](https://www.khulnasoft)에서 개발되었으며 �
 다음 설치 스크립트를 사용하여 최신 버전의 Codex를 설치하세요:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/khulnasoft/codex/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/khulnasoft/CodeX/master/codex | bash
 ```
 
 자세한 내용은 [Codex 문서](https://www.khulnasoft/codex/docs/installing_codex/)를 참조하세요.

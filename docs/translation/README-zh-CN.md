@@ -29,7 +29,7 @@ Codex最初由 [Khulnasoft](https://www.khulnasoft) 进行开发，其内部由 
 使用以下安装脚本获取最新版本的 Codex：
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/khulnasoft/codex/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/khulnasoft/CodeX/master/codex | bash
 ```
 
 在 [Codex 文档](https://www.khulnasoft/codex/docs/installing_codex/)中阅读更多内容。
