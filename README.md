@@ -1,9 +1,3 @@
-<picture>
- <source media="(prefers-color-scheme: dark)" srcset="docs/app/static/img/codex_logo_dark.svg">
- <source media="(prefers-color-scheme: light)" srcset="docs/app/static/img/codex_logo_light.svg">
- <img alt="Codex logo." src="docs/app/static/img/codex_logo_light.svg">
-</picture>
-
 # Codex
 
 ### Instant, easy, and predictable development environments
